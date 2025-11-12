@@ -118,7 +118,7 @@
       {
         "file": "assets/StartingPixelPlayer.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/StartingPixelPlayer.png\",\"extension\":\".png\"}",
         "name": "assets\\StartingPixelPlayer.png",
         "smoothed": false,
         "userAdded": false
@@ -126,7 +126,7 @@
       {
         "file": "assets/StartingPixelGroundTilemap.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/StartingPixelGroundTilemap.png\",\"extension\":\".png\",\"pskl\":{}}",
         "name": "assets\\StartingPixelGroundTilemap.png",
         "smoothed": true,
         "userAdded": false
@@ -144,6 +144,38 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\StartingPixelObstacle.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/assets_StartingPixelGroundTilemap.png2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{},\"localFilePath\":\"assets/assets_StartingPixelGroundTilemap.png2.png\"}",
+        "name": "assets\\StartingPixelGroundTilemap.png2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/assets_StartingPixelGroundTilemap.png3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{},\"localFilePath\":\"assets/assets_StartingPixelGroundTilemap.png3.png\"}",
+        "name": "assets\\StartingPixelGroundTilemap.png3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewTiledSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewTiledSprite",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewTiledSprite2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewTiledSprite2",
         "smoothed": false,
         "userAdded": false
       }
