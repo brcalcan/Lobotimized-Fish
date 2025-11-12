@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.6897782140104638,
+    "zoomFactor": 0.6672773998330118,
     "windowMask": false,
     "selectedLayer": ""
   },
@@ -43,14 +43,14 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 430.18181818181813,
-      "keepRatio": true,
+      "customSize": true,
+      "depth": 0,
+      "height": 416,
       "layer": "",
       "locked": true,
       "name": "Background_Tilemap",
       "persistentUuid": "140c37d7-fd0a-4882-83ed-142e8f549ba8",
-      "width": 728,
+      "width": 10000,
       "x": 288,
       "y": 160,
       "zOrder": -2,
@@ -82,13 +82,13 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 1.3953488372093024,
+      "depth": 1,
       "height": 416,
       "layer": "",
       "name": "FloorWall",
       "persistentUuid": "319dd267-a92f-4df6-ad03-01f8a13dc0ac",
-      "width": 60,
-      "x": 288,
+      "width": 387,
+      "x": -39,
       "y": 160,
       "zOrder": 5,
       "numberProperties": [],
@@ -99,12 +99,12 @@
       "angle": 0,
       "customSize": true,
       "depth": 3,
-      "height": 92,
+      "height": 200,
       "layer": "",
       "name": "FloorWall",
       "persistentUuid": "217c3ce9-0ac7-4a36-a94f-965e6bbfd646",
-      "width": 10000,
-      "x": 288,
+      "width": 10326,
+      "x": -38,
       "y": 484,
       "zOrder": 6,
       "numberProperties": [],
@@ -114,16 +114,48 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 10,
+      "depth": 0,
       "height": 324,
       "keepRatio": true,
       "layer": "",
       "name": "Hidden",
-      "persistentUuid": "742d0a81-29f9-4f98-814d-76971c3dee38",
+      "persistentUuid": "59ba5f3a-87e6-40b2-ab36-00f175956acb",
       "width": 324,
       "x": 944,
       "y": 160,
+      "zOrder": -1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Sky",
+      "persistentUuid": "bd2f0c2f-b9d0-4c74-b635-119cb093b499",
+      "width": 0,
+      "x": 1090,
+      "y": -123,
       "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 200,
+      "layer": "",
+      "name": "Sky",
+      "persistentUuid": "f93cb962-9a7c-4bc3-8fb5-2e9f22d89776",
+      "width": 10326,
+      "x": -38,
+      "y": -41,
+      "zOrder": 8,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -253,12 +285,20 @@
                         "y": 7
                       },
                       {
-                        "x": 27,
-                        "y": 8
+                        "x": 25,
+                        "y": 10
                       },
                       {
                         "x": 27,
-                        "y": 24
+                        "y": 12
+                      },
+                      {
+                        "x": 27,
+                        "y": 20
+                      },
+                      {
+                        "x": 25,
+                        "y": 22
                       },
                       {
                         "x": 4,
@@ -461,7 +501,7 @@
       "assetStoreId": "",
       "height": 32,
       "name": "FloorWall",
-      "texture": "NewTiledSprite",
+      "texture": "FloorWallColor",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
       "variables": [],
@@ -469,10 +509,99 @@
       "behaviors": []
     },
     {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "Hidden",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "NewSprite4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 7.5,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 8.5,
+                        "y": 64
+                      }
+                    ],
+                    [
+                      {
+                        "x": 2.5,
+                        "y": 0
+                      },
+                      {
+                        "x": 7.5,
+                        "y": 0
+                      },
+                      {
+                        "x": 8,
+                        "y": 23
+                      }
+                    ],
+                    [
+                      {
+                        "x": 8,
+                        "y": 41.5
+                      },
+                      {
+                        "x": 8.5,
+                        "y": 64
+                      },
+                      {
+                        "x": 2,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "assetStoreId": "",
       "height": 32,
-      "name": "Hidden",
-      "texture": "NewTiledSprite2",
+      "name": "Sky",
+      "texture": "SkyColor",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
       "variables": [],
@@ -491,6 +620,9 @@
       },
       {
         "objectName": "FloorWall"
+      },
+      {
+        "objectName": "Sky"
       },
       {
         "objectName": "Hidden"
@@ -579,6 +711,16 @@
           "parameters": [
             "Fish",
             "Hidden",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SeparateFromObjects"
+          },
+          "parameters": [
+            "Fish",
+            "Sky",
             ""
           ]
         }
@@ -1170,113 +1312,24 @@
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "isLocked": false,
-      "name": "Characters",
-      "renderingType": "",
-      "visibility": true,
-      "cameras": [],
-      "effects": [
-        {
-          "effectType": "Scene3D::HemisphereLight",
-          "name": "3D Ambient Hemisphere Light",
-          "doubleParameters": {
-            "elevation": 40,
-            "intensity": 0.33,
-            "rotation": 300
-          },
-          "stringParameters": {
-            "groundColor": "127;127;127",
-            "skyColor": "255;255;255",
-            "top": "Z+"
-          },
-          "booleanParameters": {}
-        },
-        {
-          "effectType": "Scene3D::DirectionalLight",
-          "name": "3D Sun Light",
-          "doubleParameters": {
-            "distanceFromCamera": 1500,
-            "elevation": 40,
-            "frustumSize": 4000,
-            "intensity": 0.75,
-            "minimumShadowBias": 0,
-            "rotation": 300
-          },
-          "stringParameters": {
-            "color": "255;255;255",
-            "shadowQuality": "medium",
-            "top": "Z+"
-          },
-          "booleanParameters": {
-            "isCastingShadow": true
-          }
-        }
-      ]
-    },
-    {
-      "ambientLightColorB": 200,
-      "ambientLightColorG": 200,
-      "ambientLightColorR": 200,
-      "camera3DFarPlaneDistance": 10000,
-      "camera3DFieldOfView": 45,
-      "camera3DNearPlaneDistance": 3,
-      "cameraType": "",
-      "followBaseLayerCamera": false,
-      "isLightingLayer": false,
-      "isLocked": false,
-      "name": "UI",
-      "renderingType": "",
-      "visibility": true,
-      "cameras": [],
-      "effects": [
-        {
-          "effectType": "Scene3D::HemisphereLight",
-          "name": "3D Ambient Hemisphere Light",
-          "doubleParameters": {
-            "elevation": 40,
-            "intensity": 0.33,
-            "rotation": 300
-          },
-          "stringParameters": {
-            "groundColor": "127;127;127",
-            "skyColor": "255;255;255",
-            "top": "Z+"
-          },
-          "booleanParameters": {}
-        },
-        {
-          "effectType": "Scene3D::DirectionalLight",
-          "name": "3D Sun Light",
-          "doubleParameters": {
-            "distanceFromCamera": 1500,
-            "elevation": 40,
-            "frustumSize": 4000,
-            "intensity": 0.75,
-            "minimumShadowBias": 0,
-            "rotation": 300
-          },
-          "stringParameters": {
-            "color": "255;255;255",
-            "shadowQuality": "medium",
-            "top": "Z+"
-          },
-          "booleanParameters": {
-            "isCastingShadow": true
-          }
-        }
-      ]
-    },
-    {
-      "ambientLightColorB": 200,
-      "ambientLightColorG": 200,
-      "ambientLightColorR": 200,
-      "camera3DFarPlaneDistance": 10000,
-      "camera3DFieldOfView": 45,
-      "camera3DNearPlaneDistance": 3,
-      "cameraType": "",
-      "followBaseLayerCamera": false,
-      "isLightingLayer": false,
-      "isLocked": false,
       "name": "MobileControls",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Characters",
       "renderingType": "",
       "visibility": true,
       "cameras": [],
