@@ -258,6 +258,49 @@
         "name": "assets\\dory_friend.webp",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/shark_enemy.webp",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\shark_enemy.webp",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/shark_enemy_1.webp",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\shark_enemy_1.webp",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/shark_enemy_2.webp",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\shark_enemy_2.webp",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/shark_enemy_3.webp",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\shark_enemy_3.webp",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Kenney Blocks.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "b6fd0cb2a1206afe3882f0187839aac780734a091c5e6c57ee25c84acdc1a499_Kenney Blocks.ttf",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Kenney Font Pack/b6fd0cb2a1206afe3882f0187839aac780734a091c5e6c57ee25c84acdc1a499_Kenney Blocks.ttf",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []
