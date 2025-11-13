@@ -226,6 +226,38 @@
         "name": "SkyColor",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/assets_StartingPixelPlayer.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "assets\\StartingPixelPlayer",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite5",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/clownfish-vibrant-small-marine-fish-600nw-2488428137.webp",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\clownfish-vibrant-small-marine-fish-600nw-2488428137.webp",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/dory_friend.webp",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\dory_friend.webp",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []

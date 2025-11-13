@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.6672773998330118,
+    "zoomFactor": 1.4790395861757712,
     "windowMask": false,
     "selectedLayer": ""
   },
@@ -31,7 +31,7 @@
       "height": 0,
       "keepRatio": true,
       "layer": "",
-      "name": "Fish",
+      "name": "MainFish",
       "persistentUuid": "ebd4e918-fdc8-4c06-baef-2e0f46c2cfd5",
       "width": 0,
       "x": 624,
@@ -159,13 +159,29 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "FriendFish",
+      "persistentUuid": "54a5397f-df05-4a0d-9aba-fc58d62b9bea",
+      "width": 0,
+      "x": 705,
+      "y": 351,
+      "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
     {
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
-      "name": "Fish",
+      "name": "MainFish",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -281,28 +297,72 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 4,
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 28.5,
                         "y": 7
                       },
                       {
-                        "x": 25,
+                        "x": 32,
                         "y": 10
                       },
                       {
-                        "x": 27,
-                        "y": 12
-                      },
-                      {
-                        "x": 27,
-                        "y": 20
-                      },
-                      {
-                        "x": 25,
+                        "x": 32,
                         "y": 22
                       },
                       {
-                        "x": 4,
+                        "x": 28.5,
                         "y": 25
+                      },
+                      {
+                        "x": 0,
+                        "y": 29
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\clownfish-vibrant-small-marine-fish-600nw-2488428137.webp",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 3
+                      },
+                      {
+                        "x": 28.5,
+                        "y": 7
+                      },
+                      {
+                        "x": 32,
+                        "y": 10
+                      },
+                      {
+                        "x": 32,
+                        "y": 22
+                      },
+                      {
+                        "x": 28.5,
+                        "y": 25
+                      },
+                      {
+                        "x": 0,
+                        "y": 29
                       }
                     ]
                   ]
@@ -607,13 +667,275 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "FriendFish",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "isFacingRight",
+          "type": "boolean",
+          "value": true
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "SmoothCamera",
+          "type": "SmoothCamera::SmoothCamera",
+          "LeftwardSpeed": 0.99,
+          "RightwardSpeed": 0.99,
+          "UpwardSpeed": 0.99,
+          "DownwardSpeed": 0.99,
+          "FollowOnX": true,
+          "FollowOnY": true,
+          "FollowFreeAreaLeft": 0,
+          "FollowFreeAreaRight": 0,
+          "FollowFreeAreaTop": 0,
+          "FollowFreeAreaBottom": 0,
+          "CameraOffsetX": 0,
+          "CameraOffsetY": 0,
+          "CameraDelay": 0,
+          "ForecastTime": 0,
+          "ForecastHistoryDuration": 0,
+          "LogLeftwardSpeed": 2.0247e-320,
+          "LogRightwardSpeed": 2.0247e-320,
+          "LogDownwardSpeed": 2.0247e-320,
+          "LogUpwardSpeed": 2.0247e-320,
+          "DelayedCenterX": 2.0247e-320,
+          "DelayedCenterY": 2.0247e-320,
+          "ForecastHistoryMeanX": 2.0247e-320,
+          "ForecastHistoryMeanY": 2.0247e-320,
+          "ForecastHistoryVarianceX": 2.0247e-320,
+          "ForecastHistoryCovariance": 2.0247e-320,
+          "ForecastHistoryLinearA": 2.0247e-320,
+          "ForecastHistoryLinearB": 2.0247e-320,
+          "ForecastedX": 2.0247e-320,
+          "ForecastedY": 2.0247e-320,
+          "ProjectedNewestX": 2.0247e-320,
+          "ProjectedNewestY": 2.0247e-320,
+          "ProjectedOldestX": 2.0247e-320,
+          "ProjectedOldestY": 2.0247e-320,
+          "ForecastHistoryVarianceY": 2.0247e-320,
+          "Index": 2.0247e-320,
+          "CameraDelayCatchUpSpeed": 0,
+          "CameraExtraDelay": 2.0247e-320,
+          "WaitingSpeedXMax": 2.0247e-320,
+          "WaitingSpeedYMax": 2.0247e-320,
+          "WaitingEnd": 2.0247e-320,
+          "CameraDelayCatchUpDuration": 2.0247e-320,
+          "LeftwardSpeedMax": 9000,
+          "RightwardSpeedMax": 9000,
+          "UpwardSpeedMax": 9000,
+          "DownwardSpeedMax": 9000,
+          "OldX": 9000.000000007454,
+          "OldY": 9000.000000007454,
+          "IsCalledManually": false
+        },
+        {
+          "name": "TopDownMovement",
+          "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+          "acceleration": 450,
+          "angularMaxSpeed": 150,
+          "deceleration": 900,
+          "maxSpeed": 125,
+          "rotateObject": false,
+          "allowDiagonals": true,
+          "angleOffset": 0,
+          "customIsometryAngle": 30,
+          "ignoreDefaultControls": false,
+          "movementAngleOffset": 0,
+          "viewpoint": "TopDown"
+        },
+        {
+          "name": "TopDownMultitouchMapper",
+          "type": "SpriteMultitouchJoystick::TopDownMultitouchMapper",
+          "TopDownMovement": "TopDownMovement",
+          "ControllerIdentifier": 1,
+          "JoystickIdentifier": "Primary",
+          "StickMode": "Analog"
+        }
+      ],
+      "animations": [
+        {
+          "name": "assets\\StartingPixelPlayer",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\StartingPixelPlayer",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 10
+                      },
+                      {
+                        "x": 28,
+                        "y": 10
+                      },
+                      {
+                        "x": 30,
+                        "y": 12
+                      },
+                      {
+                        "x": 30,
+                        "y": 20
+                      },
+                      {
+                        "x": 28.5,
+                        "y": 22
+                      },
+                      {
+                        "x": 1,
+                        "y": 23.5
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\dory_friend.webp",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 10
+                      },
+                      {
+                        "x": 28,
+                        "y": 10
+                      },
+                      {
+                        "x": 30,
+                        "y": 12
+                      },
+                      {
+                        "x": 30,
+                        "y": 20
+                      },
+                      {
+                        "x": 28.5,
+                        "y": 22
+                      },
+                      {
+                        "x": 1,
+                        "y": 23.5
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Net",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "NewSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "NewSprite5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 13,
+                        "y": 10
+                      },
+                      {
+                        "x": 53,
+                        "y": 10
+                      },
+                      {
+                        "x": 53,
+                        "y": 58
+                      },
+                      {
+                        "x": 13,
+                        "y": 58
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
     "folderName": "__ROOT",
     "children": [
       {
-        "objectName": "Fish"
+        "objectName": "MainFish"
+      },
+      {
+        "objectName": "Net"
+      },
+      {
+        "objectName": "FriendFish"
       },
       {
         "objectName": "Background_Tilemap"
@@ -679,7 +1001,7 @@
             "value": "SeparateFromObjects"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "Wall",
             ""
           ]
@@ -689,7 +1011,7 @@
             "value": "SeparateFromObjects"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "Plant",
             ""
           ]
@@ -699,7 +1021,7 @@
             "value": "SeparateFromObjects"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "FloorWall",
             ""
           ]
@@ -709,7 +1031,7 @@
             "value": "SeparateFromObjects"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "Hidden",
             ""
           ]
@@ -719,7 +1041,7 @@
             "value": "SeparateFromObjects"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "Sky",
             ""
           ]
@@ -783,7 +1105,7 @@
             "value": "FlippableCapability::FlippableBehavior::FlipX"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "Flippable",
             "no"
           ]
@@ -793,7 +1115,7 @@
             "value": "SetAngle"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "=",
             "0"
           ]
@@ -857,7 +1179,7 @@
             "value": "FlippableCapability::FlippableBehavior::FlipX"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "Flippable",
             "yes"
           ]
@@ -867,7 +1189,7 @@
             "value": "SetAngle"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "=",
             "0"
           ]
@@ -911,7 +1233,7 @@
             "value": "SetAngle"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "=",
             "90"
           ]
@@ -921,7 +1243,7 @@
             "value": "FlippableCapability::FlippableBehavior::FlipX"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "Flippable",
             "yes"
           ]
@@ -965,7 +1287,7 @@
             "value": "SetAngle"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "=",
             "-90"
           ]
@@ -975,7 +1297,7 @@
             "value": "FlippableCapability::FlippableBehavior::FlipX"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "Flippable",
             "yes"
           ]
@@ -1036,7 +1358,7 @@
             "value": "SetAngle"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "=",
             "-45"
           ]
@@ -1046,7 +1368,7 @@
             "value": "FlippableCapability::FlippableBehavior::FlipX"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "Flippable",
             "no"
           ]
@@ -1107,7 +1429,7 @@
             "value": "SetAngle"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "=",
             "45"
           ]
@@ -1117,7 +1439,7 @@
             "value": "FlippableCapability::FlippableBehavior::FlipX"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "Flippable",
             "yes"
           ]
@@ -1178,7 +1500,7 @@
             "value": "SetAngle"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "=",
             "-45"
           ]
@@ -1188,7 +1510,7 @@
             "value": "FlippableCapability::FlippableBehavior::FlipX"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "Flippable",
             "yes"
           ]
@@ -1249,7 +1571,7 @@
             "value": "SetAngle"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "=",
             "45"
           ]
@@ -1259,7 +1581,7 @@
             "value": "FlippableCapability::FlippableBehavior::FlipX"
           },
           "parameters": [
-            "Fish",
+            "MainFish",
             "Flippable",
             "no"
           ]
