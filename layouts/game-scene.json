@@ -18,9 +18,9 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.3111974942445285,
+    "zoomFactor": 1.29529165512363,
     "windowMask": false,
-    "selectedLayer": "UI"
+    "selectedLayer": ""
   },
   "objectsGroups": [],
   "variables": [],
@@ -173,6 +173,23 @@
       "x": 855,
       "y": 17,
       "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 32,
+      "keepRatio": true,
+      "layer": "",
+      "name": "FloorWall",
+      "persistentUuid": "1681d192-60a9-42d8-9c54-4f7a598399ce",
+      "width": 32,
+      "x": 348,
+      "y": 160,
+      "zOrder": 10,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -567,7 +584,7 @@
       "assetStoreId": "",
       "height": 32,
       "name": "FloorWall",
-      "texture": "FloorWallColor",
+      "texture": "assets\\wall.webp",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
       "variables": [],
@@ -1218,6 +1235,18 @@
             "numFish",
             "=",
             "3"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "water_ambience.wav",
+            "yes",
+            "50",
+            ""
           ]
         }
       ]
@@ -1910,7 +1939,7 @@
             "",
             "\"NetTimer\"",
             ">=",
-            "3"
+            "2"
           ]
         }
       ],
@@ -1944,7 +1973,7 @@
             "Net",
             "numFish",
             "=",
-            "RandomInRange(0, 3)"
+            "RandomInRange(0, 1)"
           ]
         },
         {
@@ -2141,6 +2170,18 @@
             "+",
             "1"
           ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "release.wav",
+            "",
+            "75",
+            ""
+          ]
         }
       ]
     },
@@ -2326,6 +2367,18 @@
             "Net",
             "wasReleased",
             "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "release.wav",
+            "",
+            "75",
             ""
           ]
         }
@@ -2889,6 +2942,18 @@
             "0.5",
             ""
           ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "death.wav",
+            "",
+            "75",
+            "5"
+          ]
         }
       ]
     },
@@ -2926,6 +2991,18 @@
           },
           "parameters": [
             "MainFish",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "death.wav",
+            "",
+            "75",
             ""
           ]
         }
