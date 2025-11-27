@@ -18,9 +18,9 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 1.29529165512363,
+    "zoomFactor": 0.7370816317994338,
     "windowMask": false,
-    "selectedLayer": ""
+    "selectedLayer": "UI"
   },
   "objectsGroups": [],
   "variables": [],
@@ -72,41 +72,9 @@
       "name": "Joystick",
       "persistentUuid": "b0c31bb4-0add-4dda-9367-c5136e4b118d",
       "width": 0,
-      "x": 176,
+      "x": 1024,
       "y": 576,
       "zOrder": 4,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 1,
-      "height": 416,
-      "layer": "",
-      "name": "FloorWall",
-      "persistentUuid": "319dd267-a92f-4df6-ad03-01f8a13dc0ac",
-      "width": 387,
-      "x": -39,
-      "y": 160,
-      "zOrder": 5,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 3,
-      "height": 200,
-      "layer": "",
-      "name": "FloorWall",
-      "persistentUuid": "217c3ce9-0ac7-4a36-a94f-965e6bbfd646",
-      "width": 10326,
-      "x": -38,
-      "y": 484,
-      "zOrder": 6,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -155,7 +123,7 @@
       "width": 10326,
       "x": -38,
       "y": -41,
-      "zOrder": 8,
+      "zOrder": -10,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -172,7 +140,23 @@
       "width": 424,
       "x": 855,
       "y": 17,
-      "zOrder": 9,
+      "zOrder": 100,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "a5850d07-d9be-4a7a-b7a1-0c4fb9a454fa",
+      "width": 0,
+      "x": 348,
+      "y": 160,
+      "zOrder": 11,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -180,16 +164,99 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 1,
-      "height": 32,
+      "depth": 0,
+      "height": 323.99999999999994,
       "keepRatio": true,
       "layer": "",
-      "name": "FloorWall",
-      "persistentUuid": "1681d192-60a9-42d8-9c54-4f7a598399ce",
-      "width": 32,
-      "x": 348,
+      "name": "Wall",
+      "persistentUuid": "4648b061-405d-4fde-8016-3ccc2129364b",
+      "width": 324,
+      "x": 24,
       "y": 160,
-      "zOrder": 10,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 323.99999999999994,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "c18ef5a6-5a89-47ef-b070-1d3d91e7cfcb",
+      "width": 324,
+      "x": -168,
+      "y": -164,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 127.99999999999996,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "12493bfa-98b9-4781-bb67-566727c20d02",
+      "width": 128,
+      "x": 156,
+      "y": 32,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 63.99999999999998,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "a42a3838-a32c-4356-904e-12b8eb00c58a",
+      "width": 64,
+      "x": 284,
+      "y": 96,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "5d0d55df-86d8-4e7f-a95e-250c8721a321",
+      "width": 0,
+      "x": 348,
+      "y": 128,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 200,
+      "layer": "",
+      "name": "Floor",
+      "persistentUuid": "c83cbd6f-88f0-45bb-8c15-655d7de95a4f",
+      "width": 10000,
+      "x": 0,
+      "y": 484,
+      "zOrder": 12,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -212,11 +279,17 @@
           "name": "netsReleased",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "playerIsDead",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
       "behaviors": [
         {
+          "isFolded": true,
           "name": "SmoothCamera",
           "type": "SmoothCamera::SmoothCamera",
           "LeftwardSpeed": 0.99,
@@ -412,17 +485,6 @@
       }
     },
     {
-      "assetStoreId": "",
-      "height": 32,
-      "name": "Wall",
-      "texture": "assets\\StartingPixelWall.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 32,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
-    },
-    {
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "Plant",
@@ -583,7 +645,7 @@
     {
       "assetStoreId": "",
       "height": 32,
-      "name": "FloorWall",
+      "name": "Wall",
       "texture": "assets\\wall.webp",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
@@ -597,7 +659,13 @@
       "name": "Hidden",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "XStart",
+          "type": "number",
+          "value": 745
+        }
+      ],
       "effects": [],
       "behaviors": [
         {
@@ -1127,6 +1195,11 @@
           "name": "Score",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "NumberFriends",
+          "type": "array",
+          "children": []
         }
       ],
       "effects": [],
@@ -1141,6 +1214,148 @@
         "align": "left",
         "verticalTextAlignment": "top"
       }
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "Floor",
+      "texture": "assets\\wall.webp",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "NewSprite",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "EndScreen",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\end_screen.webp",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 1228,
+                        "y": 0
+                      },
+                      {
+                        "x": 1228,
+                        "y": 1228
+                      },
+                      {
+                        "x": 0,
+                        "y": 1228
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "RestartButton",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\restart_button.webp",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 965,
+                        "y": 0
+                      },
+                      {
+                        "x": 965,
+                        "y": 364
+                      },
+                      {
+                        "x": 0,
+                        "y": 364
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -1159,22 +1374,31 @@
         "objectName": "FishFriendCount"
       },
       {
+        "objectName": "NewSprite"
+      },
+      {
+        "objectName": "EndScreen"
+      },
+      {
+        "objectName": "RestartButton"
+      },
+      {
         "objectName": "Shark"
       },
       {
         "objectName": "Background_Tilemap"
       },
       {
-        "objectName": "FloorWall"
+        "objectName": "Wall"
+      },
+      {
+        "objectName": "Floor"
       },
       {
         "objectName": "Sky"
       },
       {
         "objectName": "Hidden"
-      },
-      {
-        "objectName": "Wall"
       },
       {
         "objectName": "Plant"
@@ -1293,7 +1517,7 @@
           },
           "parameters": [
             "MainFish",
-            "FloorWall",
+            "Floor",
             ""
           ]
         },
@@ -1348,6 +1572,34 @@
       "conditions": [
         {
           "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "MainFish",
+            "playerIsDead",
+            "True",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "TopDownMovementBehavior::IgnoreDefaultControls"
+          },
+          "parameters": [
+            "MainFish",
+            "TopDownMovement",
+            "yes"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
             "value": "BuiltinCommonInstructions::Or"
           },
           "parameters": [],
@@ -1388,6 +1640,17 @@
               "parameters": [
                 "Joystick",
                 "\"Right\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "MainFish",
+                "playerIsDead",
+                "=",
                 ""
               ]
             }
@@ -1973,7 +2236,7 @@
             "Net",
             "numFish",
             "=",
-            "RandomInRange(0, 1)"
+            "RandomInRange(0, 2)"
           ]
         },
         {
@@ -2018,6 +2281,16 @@
                     "=",
                     "1"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "MainFish",
+                    "<",
+                    "Hidden.X() - 100"
+                  ]
                 }
               ]
             }
@@ -2032,7 +2305,7 @@
                 "=",
                 "MainFish.X() + 75 + RandomInRange(-30, 30)",
                 "=",
-                "420"
+                "420 + RandomInRange(-15, 0)"
               ]
             }
           ]
@@ -2056,6 +2329,16 @@
                     "=",
                     "0"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "MainFish",
+                    ">",
+                    "448"
+                  ]
                 }
               ]
             }
@@ -2070,7 +2353,7 @@
                 "=",
                 "MainFish.X() - 75 + RandomInRange(-30, 30)",
                 "=",
-                "420"
+                "420 + RandomInRange(-15, 0)"
               ]
             }
           ]
@@ -2135,7 +2418,7 @@
             "",
             "FriendFish",
             "Net.X() + RandomInRange(-10, 25)",
-            "Net.Y() + RandomInRange(-3, 15)",
+            "Net.Y() + RandomInRange(-5, 3)",
             ""
           ]
         },
@@ -2242,7 +2525,7 @@
             "",
             "FriendFish",
             "Net.X() + RandomInRange(-10, 25)",
-            "Net.Y() + RandomInRange(-3, 15)",
+            "Net.Y() + RandomInRange(-5, 3)",
             ""
           ]
         },
@@ -2316,7 +2599,7 @@
             "",
             "Shark",
             "Net.X() + RandomInRange(-20, 35)",
-            "Net.Y() + RandomInRange(-3, 15)",
+            "Net.Y() + RandomInRange(-15, 3)",
             ""
           ]
         },
@@ -2920,16 +3203,6 @@
         },
         {
           "type": {
-            "value": "BBText::SetBBText"
-          },
-          "parameters": [
-            "FishFriendCount",
-            "=",
-            "\"Friends: \" + FishFriendCount.Score"
-          ]
-        },
-        {
-          "type": {
             "value": "Tween::TweenBehavior::AddObjectPositionTween2"
           },
           "parameters": [
@@ -2982,18 +3255,20 @@
             "True",
             ""
           ]
-        }
-      ],
-      "actions": [
+        },
         {
           "type": {
-            "value": "Delete"
+            "value": "BooleanObjectVariable"
           },
           "parameters": [
             "MainFish",
+            "playerIsDead",
+            "False",
             ""
           ]
-        },
+        }
+      ],
+      "actions": [
         {
           "type": {
             "value": "PlaySound"
@@ -3004,6 +3279,143 @@
             "",
             "75",
             ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "MainFish",
+            "playerIsDead",
+            "True",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "MainFish"
+          ]
+        },
+        {
+          "type": {
+            "value": "Wait"
+          },
+          "parameters": [
+            "0.25"
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "EndScreen",
+            "-100",
+            "-100",
+            "\"UI\""
+          ]
+        },
+        {
+          "type": {
+            "value": "MettreXY"
+          },
+          "parameters": [
+            "EndScreen",
+            "=",
+            "MainFish.X() - 250",
+            "=",
+            "MainFish.Y() - 300"
+          ]
+        },
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::SetValue"
+          },
+          "parameters": [
+            "EndScreen",
+            "Scale",
+            "=",
+            "0.5"
+          ]
+        },
+        {
+          "type": {
+            "value": "ChangePlan"
+          },
+          "parameters": [
+            "EndScreen",
+            "=",
+            "-1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Will update restart button later"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "FishFriendCount",
+            "Score",
+            "=",
+            "-1000"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::SetValue"
+          },
+          "parameters": [
+            "RestartButton",
+            "Scale",
+            "=",
+            "0.25"
+          ]
+        },
+        {
+          "type": {
+            "value": "MettreXY"
+          },
+          "parameters": [
+            "RestartButton",
+            "=",
+            "MainFish.X() - 50",
+            "=",
+            "MainFish.Y() + 175"
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "RestartButton",
+            "-100",
+            "-100",
+            "\"UI\""
           ]
         }
       ]
