@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.7370816317994338,
+    "zoomFactor": 0.8993607583667005,
     "windowMask": false,
     "selectedLayer": "UI"
   },
@@ -1197,13 +1197,23 @@
           "value": 0
         },
         {
-          "name": "NumberFriends",
-          "type": "array",
-          "children": []
+          "name": "HighScore",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "HighestScore",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
       "content": {
         "text": "Friends: 0",
         "opacity": 255,
@@ -1211,7 +1221,7 @@
         "visible": true,
         "color": "0;0;0",
         "fontFamily": "b6fd0cb2a1206afe3882f0187839aac780734a091c5e6c57ee25c84acdc1a499_Kenney Blocks.ttf",
-        "align": "left",
+        "align": "center",
         "verticalTextAlignment": "top"
       }
     },
@@ -1245,7 +1255,12 @@
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
       "animations": [
         {
           "name": "",
@@ -1304,8 +1319,50 @@
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
-      "effects": [],
-      "behaviors": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 3
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "ButtonColorTintTween",
+          "type": "ButtonStates::ButtonColorTintTween",
+          "ButtonFSM": "ButtonFSM",
+          "Tween": "Tween",
+          "IdleColorTint": "222;222;222",
+          "FocusedColorTint": "255;255;255",
+          "PressedColorTint": "120;120;120",
+          "FadeInDuration": 0.1,
+          "FadeOutDuration": 0.2,
+          "FadeInEasing": "easeInOutQuad",
+          "FadeOutEasing": "easeInOutQuad",
+          "PreviousState": "Idle"
+        },
+        {
+          "name": "ButtonFSM",
+          "type": "ButtonStates::ButtonFSM",
+          "ShouldCheckHovering": true,
+          "State": "Idle",
+          "TouchId": 0,
+          "TouchIsInside": false,
+          "MouseIsInside": false,
+          "Index": 2.0247e-320
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
       "animations": [
         {
           "name": "",
@@ -1356,6 +1413,45 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "HighScore",
+      "type": "BBText::BBText",
+      "variables": [
+        {
+          "name": "Score",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "HighScore",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "HighestScore",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "content": {
+        "text": "High Score: 0",
+        "opacity": 255,
+        "fontSize": 48,
+        "visible": true,
+        "color": "0;0;0",
+        "fontFamily": "b6fd0cb2a1206afe3882f0187839aac780734a091c5e6c57ee25c84acdc1a499_Kenney Blocks.ttf",
+        "align": "center",
+        "verticalTextAlignment": "top"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -1374,13 +1470,13 @@
         "objectName": "FishFriendCount"
       },
       {
+        "objectName": "HighScore"
+      },
+      {
         "objectName": "NewSprite"
       },
       {
         "objectName": "EndScreen"
-      },
-      {
-        "objectName": "RestartButton"
       },
       {
         "objectName": "Shark"
@@ -1410,6 +1506,9 @@
             "objectName": "Joystick"
           }
         ]
+      },
+      {
+        "objectName": "RestartButton"
       }
     ]
   },
@@ -1474,18 +1573,6 @@
           ]
         }
       ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Player controls"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -1568,6 +1655,18 @@
       ]
     },
     {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Player controls"
+    },
+    {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -1591,6 +1690,24 @@
             "MainFish",
             "TopDownMovement",
             "yes"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "Joystick"
+          ]
+        },
+        {
+          "type": {
+            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::ActivateControl"
+          },
+          "parameters": [
+            "Joystick",
+            "",
+            ""
           ]
         }
       ]
@@ -1640,17 +1757,6 @@
               "parameters": [
                 "Joystick",
                 "\"Right\"",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanObjectVariable"
-              },
-              "parameters": [
-                "MainFish",
-                "playerIsDead",
-                "=",
                 ""
               ]
             }
@@ -2182,6 +2288,15 @@
       "actions": [
         {
           "type": {
+            "value": "UnPauseTimer"
+          },
+          "parameters": [
+            "",
+            "\"NetTimer\""
+          ]
+        },
+        {
+          "type": {
             "value": "ResetTimer"
           },
           "parameters": [
@@ -2203,6 +2318,17 @@
             "\"NetTimer\"",
             ">=",
             "2"
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "MainFish",
+            "playerIsDead",
+            "=",
+            ""
           ]
         }
       ],
@@ -2303,9 +2429,9 @@
               "parameters": [
                 "Net",
                 "=",
-                "MainFish.X() + 75 + RandomInRange(-30, 30)",
+                "MainFish.X() + 75 + RandomInRange(-15, 30)",
                 "=",
-                "420 + RandomInRange(-15, 0)"
+                "420 + RandomInRange(-20, 0)"
               ]
             }
           ]
@@ -2351,9 +2477,9 @@
               "parameters": [
                 "Net",
                 "=",
-                "MainFish.X() - 75 + RandomInRange(-30, 30)",
+                "MainFish.X() - 75 + RandomInRange(-30, 15)",
                 "=",
-                "420 + RandomInRange(-15, 0)"
+                "420 + RandomInRange(-20, 0)"
               ]
             }
           ]
@@ -2719,8 +2845,42 @@
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
+      "conditions": [
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "MainFish",
+            "playerIsDead",
+            "=",
+            ""
+          ]
+        }
+      ],
       "actions": [
+        {
+          "type": {
+            "value": "LinkedObjects::PickObjectsLinkedTo"
+          },
+          "parameters": [
+            "",
+            "FriendFish",
+            "FishFriendCount",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "FishFriendCount",
+            "Score",
+            "=",
+            "PickedInstancesCount(FriendFish)"
+          ]
+        },
         {
           "type": {
             "value": "BBText::SetBBText"
@@ -2729,6 +2889,116 @@
             "FishFriendCount",
             "=",
             "\"Friends: \" + FishFriendCount.Score"
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+          },
+          "parameters": [
+            "Hidden",
+            "Tween",
+            "\"ShiftRight\"",
+            "745 + 15 * FishFriendCount.Score",
+            "Hidden.Y()",
+            "\"linear\"",
+            "0.5",
+            ""
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "FishFriendCount.Score",
+                ">",
+                "FishFriendCount.HighScore"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "FishFriendCount",
+                "HighScore",
+                "=",
+                "FishFriendCount.Score"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "FishFriendCount.Score",
+                ">",
+                "FishFriendCount.HighestScore"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "FishFriendCount",
+                "HighestScore",
+                "=",
+                "FishFriendCount.Score"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "AjoutHasard"
+          },
+          "parameters": [
+            "",
+            "FriendFish"
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "FriendFish",
+            "isFriend",
+            "True",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "LinkedObjects::LinkObjects"
+          },
+          "parameters": [
+            "",
+            "FriendFish",
+            "FishFriendCount"
           ]
         }
       ]
@@ -2779,32 +3049,6 @@
           "parameters": [
             "FriendFish",
             "\"SchoolClock\""
-          ]
-        },
-        {
-          "type": {
-            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
-          },
-          "parameters": [
-            "Hidden",
-            "Tween",
-            "\"ShiftRight\"",
-            "Hidden.X() + 15",
-            "Hidden.Y()",
-            "\"linear\"",
-            "0.5",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetNumberObjectVariable"
-          },
-          "parameters": [
-            "FishFriendCount",
-            "Score",
-            "+",
-            "1"
           ]
         }
       ]
@@ -3150,12 +3394,6 @@
             "True",
             ""
           ]
-        },
-        {
-          "type": {
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": []
         }
       ],
       "actions": [
@@ -3183,36 +3421,10 @@
         },
         {
           "type": {
-            "value": "SetNumberObjectVariable"
-          },
-          "parameters": [
-            "FishFriendCount",
-            "Score",
-            "-",
-            "1"
-          ]
-        },
-        {
-          "type": {
             "value": "Delete"
           },
           "parameters": [
             "FriendFish",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
-          },
-          "parameters": [
-            "Hidden",
-            "Tween",
-            "\"ShiftRight\"",
-            "Hidden.X() - 15",
-            "Hidden.Y()",
-            "\"linear\"",
-            "0.5",
             ""
           ]
         },
@@ -3322,6 +3534,17 @@
         },
         {
           "type": {
+            "value": "OpacityCapability::OpacityBehavior::SetValue"
+          },
+          "parameters": [
+            "EndScreen",
+            "Opacity",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
             "value": "MettreXY"
           },
           "parameters": [
@@ -3334,13 +3557,24 @@
         },
         {
           "type": {
-            "value": "ScalableCapability::ScalableBehavior::SetValue"
+            "value": "ResizableCapability::ResizableBehavior::SetWidth"
           },
           "parameters": [
             "EndScreen",
-            "Scale",
+            "Resizable",
             "=",
-            "0.5"
+            "CameraWidth() * 2"
+          ]
+        },
+        {
+          "type": {
+            "value": "ResizableCapability::ResizableBehavior::SetHeight"
+          },
+          "parameters": [
+            "EndScreen",
+            "Resizable",
+            "=",
+            "CameraHeight() * 2"
           ]
         },
         {
@@ -3352,37 +3586,56 @@
             "=",
             "-1"
           ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Will update restart button later"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
+        },
         {
           "type": {
-            "value": "NumberObjectVariable"
+            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
           },
           "parameters": [
-            "FishFriendCount",
-            "Score",
-            "=",
-            "-1000"
+            "EndScreen",
+            "Tween",
+            "\"EndScreenFadeIn\"",
+            "255",
+            "\"linear\"",
+            "1",
+            ""
           ]
-        }
-      ],
-      "actions": [
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "RestartButton",
+            "-100",
+            "-100",
+            "\"UI\""
+          ]
+        },
+        {
+          "type": {
+            "value": "OpacityCapability::OpacityBehavior::SetValue"
+          },
+          "parameters": [
+            "RestartButton",
+            "Opacity",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "MettreXY"
+          },
+          "parameters": [
+            "RestartButton",
+            "=",
+            "EndScreen.CenterX() - RestartButton.Width() / 8",
+            "=",
+            "EndScreen.CenterY() + 130"
+          ]
+        },
         {
           "type": {
             "value": "ScalableCapability::ScalableBehavior::SetValue"
@@ -3396,14 +3649,78 @@
         },
         {
           "type": {
-            "value": "MettreXY"
+            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
           },
           "parameters": [
             "RestartButton",
+            "Tween",
+            "\"RestartButtonFadeIn\"",
+            "255",
+            "\"linear\"",
+            "1",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "OpacityCapability::OpacityBehavior::SetValue"
+          },
+          "parameters": [
+            "FishFriendCount",
+            "Opacity",
             "=",
-            "MainFish.X() - 50",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "BBText::SetBBText"
+          },
+          "parameters": [
+            "FishFriendCount",
             "=",
-            "MainFish.Y() + 175"
+            "\"Friends: \" + FishFriendCount.HighScore"
+          ]
+        },
+        {
+          "type": {
+            "value": "MettreXY"
+          },
+          "parameters": [
+            "FishFriendCount",
+            "=",
+            "EndScreen.CenterX() - FishFriendCount.Width() / 2",
+            "=",
+            "EndScreen.CenterY() - 30"
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+          },
+          "parameters": [
+            "FishFriendCount",
+            "Tween",
+            "\"TweenToCenter\"",
+            "EndScreen.CenterX() - FishFriendCount.Width() / 2",
+            "EndScreen.CenterY() - 30",
+            "\"linear\"",
+            "1",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+          },
+          "parameters": [
+            "FishFriendCount",
+            "Tween",
+            "\"ScoreFadeIn\"",
+            "255",
+            "\"linear\"",
+            "1",
+            ""
           ]
         },
         {
@@ -3412,10 +3729,160 @@
           },
           "parameters": [
             "",
-            "RestartButton",
+            "HighScore",
             "-100",
             "-100",
             "\"UI\""
+          ]
+        },
+        {
+          "type": {
+            "value": "OpacityCapability::OpacityBehavior::SetValue"
+          },
+          "parameters": [
+            "HighScore",
+            "Opacity",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "BBText::SetBBText"
+          },
+          "parameters": [
+            "HighScore",
+            "=",
+            "\"High Score: \" + FishFriendCount.HighestScore"
+          ]
+        },
+        {
+          "type": {
+            "value": "MettreXY"
+          },
+          "parameters": [
+            "HighScore",
+            "=",
+            "EndScreen.CenterX() - HighScore.Width() / 2",
+            "=",
+            "EndScreen.CenterY() + 35"
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+          },
+          "parameters": [
+            "HighScore",
+            "Tween",
+            "\"HighScoreFadeIn\"",
+            "255",
+            "\"linear\"",
+            "1",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetCameraCenterX"
+          },
+          "parameters": [
+            "",
+            "=",
+            "EndScreen.CenterX()",
+            "\"UI\"",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetCameraCenterY"
+          },
+          "parameters": [
+            "",
+            "=",
+            "EndScreen.CenterY()",
+            "\"UI\"",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "AjoutObjConcern"
+          },
+          "parameters": [
+            "",
+            "Shark"
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+          },
+          "parameters": [
+            "Shark",
+            "Tween",
+            "\"FadeAway\"",
+            "0",
+            "\"linear\"",
+            "1",
+            "yes"
+          ]
+        },
+        {
+          "type": {
+            "value": "AjoutObjConcern"
+          },
+          "parameters": [
+            "",
+            "Net"
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "Net",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "AjoutObjConcern"
+          },
+          "parameters": [
+            "",
+            "FriendFish"
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "FriendFish",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PauseTimer"
+          },
+          "parameters": [
+            "",
+            "\"NetTimer\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "MainFish",
+            "netsReleased",
+            "=",
+            "0"
           ]
         }
       ]
@@ -3612,6 +4079,193 @@
           ]
         }
       ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Will update restart button later"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "ButtonStates::ButtonFSM::IsPressed"
+          },
+          "parameters": [
+            "RestartButton",
+            "ButtonFSM",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "MettreXY"
+          },
+          "parameters": [
+            "MainFish",
+            "=",
+            "435",
+            "=",
+            "361"
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "EndScreen",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "RestartButton",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "HighScore",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "BBText::SetBBText"
+          },
+          "parameters": [
+            "FishFriendCount",
+            "=",
+            "\"Friends: \" + FishFriendCount.Score"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "MainFish",
+            "playerIsDead",
+            "False",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Montre"
+          },
+          "parameters": [
+            "Joystick",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Montre"
+          },
+          "parameters": [
+            "MainFish",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "TopDownMovementBehavior::IgnoreDefaultControls"
+          },
+          "parameters": [
+            "MainFish",
+            "TopDownMovement",
+            "no"
+          ]
+        },
+        {
+          "type": {
+            "value": "SpriteMultitouchJoystick::SpriteMultitouchJoystick::ActivateControl"
+          },
+          "parameters": [
+            "Joystick",
+            "yes",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+          },
+          "parameters": [
+            "FishFriendCount",
+            "Tween",
+            "\"TweenToCorner\"",
+            "CameraCenterX()+ 600",
+            "CameraCenterY() - 280",
+            "\"linear\"",
+            "1",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "OpacityCapability::OpacityBehavior::SetValue"
+          },
+          "parameters": [
+            "HighScore",
+            "Opacity",
+            "=",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Net",
+            "MainFish.X() + RandomInRange(-40, 40)",
+            "420",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Net",
+            "numFish",
+            "=",
+            "3"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "FishFriendCount",
+            "HighScore",
+            "=",
+            "0"
+          ]
+        }
+      ]
     }
   ],
   "layers": [
@@ -3682,6 +4336,14 @@
     {
       "name": "Animation",
       "type": "AnimatableCapability::AnimatableBehavior"
+    },
+    {
+      "name": "ButtonColorTintTween",
+      "type": "ButtonStates::ButtonColorTintTween"
+    },
+    {
+      "name": "ButtonFSM",
+      "type": "ButtonStates::ButtonFSM"
     },
     {
       "name": "Effect",
