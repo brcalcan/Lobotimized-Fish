@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.8993607583667005,
+    "zoomFactor": 0.6244537826600265,
     "windowMask": false,
     "selectedLayer": "UI"
   },
@@ -2586,7 +2586,7 @@
           },
           "parameters": [
             "",
-            "release.wav",
+            "net.mp3",
             "",
             "75",
             ""
@@ -2785,7 +2785,7 @@
           },
           "parameters": [
             "",
-            "release.wav",
+            "net.mp3",
             "",
             "75",
             ""
@@ -3049,6 +3049,18 @@
           "parameters": [
             "FriendFish",
             "\"SchoolClock\""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Yippee Sound Effect.mp3",
+            "",
+            "50",
+            ""
           ]
         }
       ]
@@ -3434,10 +3446,10 @@
           },
           "parameters": [
             "",
-            "death.wav",
+            "incapacitate.mp3",
             "",
-            "75",
-            "5"
+            "50",
+            ""
           ]
         }
       ]
@@ -3487,9 +3499,21 @@
           },
           "parameters": [
             "",
-            "death.wav",
+            "death.mp3",
             "",
             "75",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Hells Kitchen Violin - Sound Effect (HD).mp3",
+            "",
+            "50",
             ""
           ]
         },

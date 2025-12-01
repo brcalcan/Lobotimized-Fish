@@ -424,6 +424,56 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/Pixel art/6b410f07a3a02e721a49d41795e84b56707ef28ac4d095d55f1fd1093760e134_8BitOperatorPlus8Regular_Edited.fnt",
           "name": "8BitOperatorPlus8Regular_Edited.fnt"
         }
+      },
+      {
+        "file": "Yippee Sound Effect.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Yippee Sound Effect.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Hells Kitchen Violin - Sound Effect (HD).mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Hells Kitchen Violin - Sound Effect (HD).mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "incapacitate.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "incapacitate.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "net.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "net.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "death.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "death.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
