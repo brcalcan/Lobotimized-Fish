@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.9934433498260096,
+    "zoomFactor": 1.0269425874981615,
     "windowMask": false,
     "selectedLayer": ""
   },
@@ -2798,6 +2798,17 @@
               "subInstructions": [
                 {
                   "type": {
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "FriendFish",
+                    "FishFriendCount",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "CollisionNP"
                   },
                   "parameters": [
@@ -2805,17 +2816,6 @@
                     "Net",
                     "",
                     "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "FriendFish",
-                    "isFriend",
-                    "True",
                     ""
                   ]
                 }
@@ -3018,6 +3018,17 @@
               "subInstructions": [
                 {
                   "type": {
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "FriendFish",
+                    "FishFriendCount",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "CollisionNP"
                   },
                   "parameters": [
@@ -3025,17 +3036,6 @@
                     "Net",
                     "",
                     "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "FriendFish",
-                    "isFriend",
-                    "True",
                     ""
                   ]
                 }
