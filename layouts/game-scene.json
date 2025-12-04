@@ -265,22 +265,6 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Credits",
-      "persistentUuid": "43a0a746-b233-4473-b9ea-7a941a73b92c",
-      "width": 0,
-      "x": 71,
-      "y": 115,
-      "zOrder": 101,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
       "customSize": true,
       "depth": 13.034035270159018,
       "height": 1000,
@@ -291,22 +275,6 @@
       "x": 174,
       "y": -245,
       "zOrder": -10,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Credits_2",
-      "persistentUuid": "c02f640e-1574-447c-b7c4-e0b9e5d6baa7",
-      "width": 0,
-      "x": 329,
-      "y": 487,
-      "zOrder": 102,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -2886,7 +2854,7 @@
           },
           "parameters": [
             "",
-            "net.mp3",
+            "release.wav",
             "",
             "75",
             ""
@@ -3124,7 +3092,7 @@
           },
           "parameters": [
             "",
-            "net.mp3",
+            "release.wav",
             "",
             "75",
             ""
@@ -3388,9 +3356,9 @@
           },
           "parameters": [
             "",
-            "Yippee Sound Effect.mp3",
+            "net.mp3",
             "",
-            "50",
+            "75",
             ""
           ]
         }
@@ -3777,10 +3745,10 @@
           },
           "parameters": [
             "",
-            "incapacitate.mp3",
+            "death.wav",
             "",
-            "100",
-            ""
+            "75",
+            "5"
           ]
         }
       ]
@@ -4250,18 +4218,6 @@
             "netsReleased",
             "=",
             "0"
-          ]
-        },
-        {
-          "type": {
-            "value": "PlaySound"
-          },
-          "parameters": [
-            "",
-            "Hells Kitchen Violin - Sound Effect (HD).mp3",
-            "",
-            "75",
-            ""
           ]
         }
       ]
