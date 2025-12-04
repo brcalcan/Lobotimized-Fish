@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.12710233719927372,
+    "zoomFactor": 0.9934433498260096,
     "windowMask": false,
     "selectedLayer": ""
   },
@@ -272,8 +272,8 @@
       "name": "Credits",
       "persistentUuid": "43a0a746-b233-4473-b9ea-7a941a73b92c",
       "width": 0,
-      "x": 74,
-      "y": 185,
+      "x": 71,
+      "y": 115,
       "zOrder": 101,
       "numberProperties": [],
       "stringProperties": [],
@@ -291,6 +291,22 @@
       "x": 174,
       "y": -245,
       "zOrder": -10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Credits_2",
+      "persistentUuid": "c02f640e-1574-447c-b7c4-e0b9e5d6baa7",
+      "width": 0,
+      "x": 329,
+      "y": 487,
+      "zOrder": 102,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1507,7 +1523,7 @@
         }
       ],
       "content": {
-        "text": "Credits\nCore Gameplay: Brighton\nVisual Style: Lemon\nSound Design: Lemon\nProgression/Story: Brighton\n\nAssets\nMain Fish: Papia Majumder\nFish Friends: Desi Patmala\nEndscreen Fish:  https://www.kqed.org/\nnews/11923920\nSad Emoji: XapolloAndy\nMan Face: https://www.clipartmax.com/\nmiddle/m2i8b1A0b1N4N4N4_man-face-\nroblox-roblox-faces/\nCloud: https://www.pinterest.com/pin/\n89368373846627093/\nOcean: Artman 3661",
+        "text": "Credits\nCore Gameplay: Brighton\nVisual Style: Lemon\nSound Design: Lemon\nProgression/Story: Brighton\n\nOur Assets\nMoving Wall and Nets: Brighton\nBlocks, Character Edits: Lemon\n\nOther Images\nMain Fish: Papia Majumder\nFish Friends: Desi Patmala\nEndscreen Fish:  https://www.kqed.org/\nnews/11923920\nSad Emoji: XapolloAndy\nMan Face: https://www.clipartmax.com/\nmiddle/m2i8b1A0b1N4N4N4_man-face-\nroblox-roblox-faces/\nCloud: https://www.pinterest.com/pin/\n89368373846627093/\nOcean: Artman 3661",
         "opacity": 255,
         "fontSize": 16,
         "visible": true,
@@ -1527,6 +1543,42 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "name": "Credits_2",
+      "type": "BBText::BBText",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 4
+          },
+          "stringParameters": {
+            "color": "50;75;105"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "content": {
+        "text": "Other Sounds\nDeath: https://www.myinstants.com/en/instant/fahhh-42300/\nFriend Death: https://www.myinstants.com/en/instant/death-sound-fortnite-13941/\nStinger: https://www.myinstants.com/en/instant/hells-kitchen-violin-stinger-49621/\nYippee: https://www.myinstants.com/en/instant/yippee-tbh-93589/\nSmoke Alarm: https://www.myinstants.com/en/instant/smoke-alarm-beep-61590/",
+        "opacity": 255,
+        "fontSize": 16,
+        "visible": true,
+        "color": "246;247;253",
+        "fontFamily": "668523d3d2bb73faa358e1ebafa55f43d2760f8abbe99aa15476121c1bcc7eb6_Charm-Regular.ttf",
+        "align": "center",
+        "verticalTextAlignment": "top"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -1549,6 +1601,9 @@
       },
       {
         "objectName": "Credits"
+      },
+      {
+        "objectName": "Credits_2"
       },
       {
         "objectName": "EndScreen"
