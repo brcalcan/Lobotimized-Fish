@@ -13,14 +13,16 @@
     "gridType": "rectangular",
     "gridWidth": 32,
     "gridHeight": 32,
+    "gridDepth": 32,
     "gridOffsetX": 0,
     "gridOffsetY": 0,
+    "gridOffsetZ": 0,
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.6244537826600265,
+    "zoomFactor": 0.12710233719927372,
     "windowMask": false,
-    "selectedLayer": "UI"
+    "selectedLayer": ""
   },
   "objectsGroups": [],
   "variables": [],
@@ -50,7 +52,7 @@
       "locked": true,
       "name": "Background_Tilemap",
       "persistentUuid": "140c37d7-fd0a-4882-83ed-142e8f549ba8",
-      "width": 10000,
+      "width": 100000,
       "x": 288,
       "y": 160,
       "zOrder": -2,
@@ -138,7 +140,7 @@
       "name": "FishFriendCount",
       "persistentUuid": "fe4d64a0-bfde-4379-a68e-91dcf17a94c0",
       "width": 424,
-      "x": 855,
+      "x": 808,
       "y": 17,
       "zOrder": 100,
       "numberProperties": [],
@@ -253,10 +255,42 @@
       "layer": "",
       "name": "Floor",
       "persistentUuid": "c83cbd6f-88f0-45bb-8c15-655d7de95a4f",
-      "width": 10000,
+      "width": 100000,
       "x": 0,
       "y": 484,
       "zOrder": 12,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Credits",
+      "persistentUuid": "43a0a746-b233-4473-b9ea-7a941a73b92c",
+      "width": 0,
+      "x": 74,
+      "y": 185,
+      "zOrder": 101,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 13.034035270159018,
+      "height": 1000,
+      "layer": "",
+      "name": "Clouds",
+      "persistentUuid": "ae1e0eea-43f5-45cf-b792-e1e40462b704",
+      "width": 100270.83333333337,
+      "x": 174,
+      "y": -245,
+      "zOrder": -10,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -932,7 +966,12 @@
         }
       ],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
       "animations": [
         {
           "name": "NewSprite",
@@ -1239,17 +1278,6 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "NewSprite",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": []
-    },
-    {
-      "adaptCollisionMaskAutomatically": true,
-      "assetStoreId": "",
       "name": "EndScreen",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -1452,6 +1480,53 @@
         "align": "center",
         "verticalTextAlignment": "top"
       }
+    },
+    {
+      "assetStoreId": "",
+      "name": "Credits",
+      "type": "BBText::BBText",
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Outline",
+          "name": "Effect",
+          "doubleParameters": {
+            "padding": 0,
+            "thickness": 4
+          },
+          "stringParameters": {
+            "color": "50;75;105"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "content": {
+        "text": "Credits\nCore Gameplay: Brighton\nVisual Style: Lemon\nSound Design: Lemon\nProgression/Story: Brighton\n\nAssets\nMain Fish: Papia Majumder\nFish Friends: Desi Patmala\nEndscreen Fish:  https://www.kqed.org/\nnews/11923920\nSad Emoji: XapolloAndy\nMan Face: https://www.clipartmax.com/\nmiddle/m2i8b1A0b1N4N4N4_man-face-\nroblox-roblox-faces/\nCloud: https://www.pinterest.com/pin/\n89368373846627093/\nOcean: Artman 3661",
+        "opacity": 255,
+        "fontSize": 16,
+        "visible": true,
+        "color": "246;247;253",
+        "fontFamily": "668523d3d2bb73faa358e1ebafa55f43d2760f8abbe99aa15476121c1bcc7eb6_Charm-Regular.ttf",
+        "align": "center",
+        "verticalTextAlignment": "top"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "height": 16,
+      "name": "Clouds",
+      "texture": "assets\\clouds.webp",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 30,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -1473,7 +1548,7 @@
         "objectName": "HighScore"
       },
       {
-        "objectName": "NewSprite"
+        "objectName": "Credits"
       },
       {
         "objectName": "EndScreen"
@@ -1492,6 +1567,9 @@
       },
       {
         "objectName": "Sky"
+      },
+      {
+        "objectName": "Clouds"
       },
       {
         "objectName": "Hidden"
@@ -1614,16 +1692,6 @@
           },
           "parameters": [
             "MainFish",
-            "Hidden",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SeparateFromObjects"
-          },
-          "parameters": [
-            "MainFish",
             "Sky",
             ""
           ]
@@ -1649,6 +1717,46 @@
             "=",
             "MainFish.Y()",
             "",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "The event below fixes sn edge case where the player can be pushed while they die, which prevents the score from positioning correctly when restarting"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
+          },
+          "parameters": [
+            "MainFish",
+            "playerIsDead",
+            "False",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SeparateFromObjects"
+          },
+          "parameters": [
+            "MainFish",
+            "Hidden",
             ""
           ]
         }
@@ -2307,6 +2415,7 @@
       ]
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -2491,16 +2600,101 @@
       "conditions": [
         {
           "type": {
-            "value": "CollisionNP"
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"NetTimer\"",
+            ">=",
+            "max(-FishFriendCount.Score/100 + 2, 1)"
+          ]
+        },
+        {
+          "type": {
+            "value": "BooleanObjectVariable"
           },
           "parameters": [
             "MainFish",
+            "playerIsDead",
+            "=",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
             "Net",
-            "",
-            "",
+            "RandomInRange(400, 730 + FishFriendCount.Score)",
+            "150",
             ""
           ]
         },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"NetTimer\""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Net",
+            "numFish",
+            "=",
+            "RandomInRange(0, 2)"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Net",
+            "isPlacedToRight",
+            "=",
+            "RandomInRange(0, 1)"
+          ]
+        },
+        {
+          "type": {
+            "value": "ChangePlan"
+          },
+          "parameters": [
+            "Net",
+            "=",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+          },
+          "parameters": [
+            "Net",
+            "Tween",
+            "\"FloatDown\"",
+            "Net.X()",
+            "RandomInRange(360, 420)",
+            "\"easeOutCubic\"",
+            "3",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
         {
           "type": {
             "value": "NumberObjectVariable"
@@ -2521,6 +2715,57 @@
             "numSpawnedFish",
             "=",
             "-1"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Or"
+          },
+          "parameters": [],
+          "subInstructions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "MainFish",
+                "Net",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "FriendFish",
+                    "Net",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "FriendFish",
+                    "isFriend",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            }
           ]
         }
       ],
@@ -2672,18 +2917,6 @@
       "conditions": [
         {
           "type": {
-            "value": "CollisionNP"
-          },
-          "parameters": [
-            "MainFish",
-            "Net",
-            "",
-            "",
-            ""
-          ]
-        },
-        {
-          "type": {
             "value": "NumberObjectVariable"
           },
           "parameters": [
@@ -2702,6 +2935,57 @@
             "numSpawnedFish",
             "=",
             "-1"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Or"
+          },
+          "parameters": [],
+          "subInstructions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "MainFish",
+                "Net",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "FriendFish",
+                    "Net",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "FriendFish",
+                    "isFriend",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            }
           ]
         }
       ],
@@ -2967,17 +3251,9 @@
       ]
     },
     {
-      "type": "BuiltinCommonInstructions::Standard",
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "FriendFish",
       "conditions": [
-        {
-          "type": {
-            "value": "AjoutHasard"
-          },
-          "parameters": [
-            "",
-            "FriendFish"
-          ]
-        },
         {
           "type": {
             "value": "BooleanObjectVariable"
@@ -3350,7 +3626,7 @@
             "FriendFish",
             "surroundX",
             "=",
-            "MainFish.X() + RandomInRange(-30, 30)"
+            "MainFish.X() + RandomInRange(5, 30 +  sqrt(FishFriendCount.Score)) * cos(ToRad(RandomInRange(0, 360)))"
           ]
         },
         {
@@ -3361,7 +3637,7 @@
             "FriendFish",
             "surroundY",
             "=",
-            "MainFish.Y() + RandomInRange(-30, 30)"
+            "max(MainFish.Y() + RandomInRange(5, 30 + sqrt(FishFriendCount.Score)) * sin(ToRad(RandomInRange(0, 360))), 160)"
           ]
         },
         {
@@ -3448,7 +3724,7 @@
             "",
             "incapacitate.mp3",
             "",
-            "50",
+            "100",
             ""
           ]
         }
@@ -3501,7 +3777,7 @@
             "",
             "death.mp3",
             "",
-            "75",
+            "100",
             ""
           ]
         },
@@ -3511,9 +3787,21 @@
           },
           "parameters": [
             "",
-            "Hells Kitchen Violin - Sound Effect (HD).mp3",
+            "death.mp3",
             "",
-            "50",
+            "100",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "death.mp3",
+            "",
+            "100",
             ""
           ]
         },
@@ -3908,6 +4196,18 @@
             "=",
             "0"
           ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Hells Kitchen Violin - Sound Effect (HD).mp3",
+            "",
+            "75",
+            ""
+          ]
         }
       ]
     },
@@ -4114,7 +4414,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "Will update restart button later"
+      "comment": "Restart Button"
     },
     {
       "type": "BuiltinCommonInstructions::Standard",
@@ -4237,7 +4537,7 @@
             "FishFriendCount",
             "Tween",
             "\"TweenToCorner\"",
-            "CameraCenterX()+ 600",
+            "CameraCenterX() + 560",
             "CameraCenterY() - 280",
             "\"linear\"",
             "1",
@@ -4297,6 +4597,7 @@
       "ambientLightColorB": 200,
       "ambientLightColorG": 200,
       "ambientLightColorR": 200,
+      "camera2DPlaneMaxDrawingDistance": 5000,
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
@@ -4325,6 +4626,7 @@
       "ambientLightColorB": 200,
       "ambientLightColorG": 200,
       "ambientLightColorR": 200,
+      "camera2DPlaneMaxDrawingDistance": 5000,
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
@@ -4342,6 +4644,7 @@
       "ambientLightColorB": 200,
       "ambientLightColorG": 200,
       "ambientLightColorR": 200,
+      "camera2DPlaneMaxDrawingDistance": 5000,
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
