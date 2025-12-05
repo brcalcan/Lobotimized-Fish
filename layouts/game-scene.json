@@ -13,10 +13,8 @@
     "gridType": "rectangular",
     "gridWidth": 32,
     "gridHeight": 32,
-    "gridDepth": 32,
     "gridOffsetX": 0,
     "gridOffsetY": 0,
-    "gridOffsetZ": 0,
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
@@ -2629,7 +2627,7 @@
             "",
             "\"NetTimer\"",
             ">=",
-            "max(-FishFriendCount.Score/100 + 2, 1)"
+            "max(-FishFriendCount.Score/100 + 2, 0.5)"
           ]
         },
         {
@@ -2652,7 +2650,7 @@
           "parameters": [
             "",
             "Net",
-            "RandomInRange(400, 730 + FishFriendCount.Score)",
+            "RandomInRange(365, 750 + FishFriendCount.Score * 15)",
             "150",
             ""
           ]
@@ -2711,6 +2709,16 @@
             "\"easeOutCubic\"",
             "3",
             ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetAngle"
+          },
+          "parameters": [
+            "Net",
+            "=",
+            "RandomInRange(-15, 15)"
           ]
         }
       ]
@@ -3818,18 +3826,6 @@
         },
         {
           "type": {
-            "value": "PlaySound"
-          },
-          "parameters": [
-            "",
-            "death.mp3",
-            "",
-            "100",
-            ""
-          ]
-        },
-        {
-          "type": {
             "value": "SetBooleanObjectVariable"
           },
           "parameters": [
@@ -3845,6 +3841,15 @@
           },
           "parameters": [
             "MainFish"
+          ]
+        },
+        {
+          "type": {
+            "value": "PauseTimer"
+          },
+          "parameters": [
+            "",
+            "\"NetTimer\""
           ]
         },
         {
@@ -4198,15 +4203,6 @@
           "parameters": [
             "FriendFish",
             ""
-          ]
-        },
-        {
-          "type": {
-            "value": "PauseTimer"
-          },
-          "parameters": [
-            "",
-            "\"NetTimer\""
           ]
         },
         {
@@ -4608,7 +4604,6 @@
       "ambientLightColorB": 200,
       "ambientLightColorG": 200,
       "ambientLightColorR": 200,
-      "camera2DPlaneMaxDrawingDistance": 5000,
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
@@ -4637,7 +4632,6 @@
       "ambientLightColorB": 200,
       "ambientLightColorG": 200,
       "ambientLightColorR": 200,
-      "camera2DPlaneMaxDrawingDistance": 5000,
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
@@ -4655,7 +4649,6 @@
       "ambientLightColorB": 200,
       "ambientLightColorG": 200,
       "ambientLightColorR": 200,
-      "camera2DPlaneMaxDrawingDistance": 5000,
       "camera3DFarPlaneDistance": 10000,
       "camera3DFieldOfView": 45,
       "camera3DNearPlaneDistance": 3,
